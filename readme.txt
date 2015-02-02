@@ -11,10 +11,12 @@ Useful WordPress Add-ons for Bootstrap Themes (Powered by them.es)
 
 == Description ==
 
-Target Group?
+= Target Group? =
+
 * Installing this Plugin is strongly recommended for [them.es](http://them.es/ "them.es") customers who want to implement the featured Modules
     
-What you get?
+= What you get? =
+
 * Shortcodes: Google Maps, Contact Form, Latest Posts, Carousel, Grid, etc.
 * Page Builder
 * WordPress Standard Image Gallery hooks, Portfolio Filter
@@ -22,23 +24,25 @@ What you get?
 * Easy Setup/Customization
 * Theme Customization API (on them.es Themes!)
 
-Compatibility?
-* Tested to work with all [them.es](http://them.es/ "them.es") Themes
-* Some Styles and Javascripts depend on the Bootstrap framework which is NOT included in this Plugin - Your Theme needs to support Bootstrap!
+= Compatibility? =
 
-Feedback/Help/Contribution?
-* We do have a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions, and pull requests:
-  [https://github.com/them-es](https://github.com/them-es "GitHub")
+* Tested to work with all [them.es](http://them.es/ "them.es") Themes
+* Some Styles and Javascripts depend on the Bootstrap framework - __The Bootstrap components need to be included in your Theme!__
+
+= Feedback/Help/Contribution? =
+
+* We do have a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions, and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
+
+== Screenshots ==
+
+1. TinyMCE Button
+2. Shortcodes WYSIWYG
+3. Edit a Post Element
 
 == Installation ==
 
 1. Upload the plugin to the `/wp-content/plugins/` directory
 2. Activate it through the 'Plugins' menu in WordPress
-
-== Screenshots ==
-
-1. First
-2. Second
 
 == Frequently Asked Questions ==
 
@@ -51,8 +55,8 @@ How much does this plugin cost?
 
 Where can I get help?
 * Feel free to ask a question in the Support forums:
-  [https://github.com/them-es](https://github.com/them-es "GitHub")
-  [http://them.es/support](http://them.es/support "them.es Support")
+[https://github.com/them-es](https://github.com/them-es "GitHub")
+[http://them.es/support](http://them.es/support "them.es Support")
   
 == Upgrade Notice ==
 
