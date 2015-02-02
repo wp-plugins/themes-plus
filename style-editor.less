@@ -1,0 +1,33 @@
+// Global less-values
+@gray-dark: #ababab;
+@gray-darker: #000;
+@gray: #ccc;
+@gray-light: #f8f8f8;
+@gray-lighter: #fafafa;
+
+
+#tinymce {
+    
+    margin: 10px;
+    
+}
+
+.wpview-wrap {
+    
+    .wpview-content {
+        padding: 15px;
+        border: 3px dashed @gray-dark;
+        background: @gray-lighter;
+    }
+    
+    &[data-mce-selected] {
+        
+        .wpview-content {
+            border-style: solid;
+        }
+        
+    }
+    
+
+    
+}
