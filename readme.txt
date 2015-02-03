@@ -7,27 +7,28 @@ Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Useful WordPress Add-ons for Bootstrap Themes (Powered by them.es)
+Useful WordPress Add-ons for Themes built with Bootstrap
 
 == Description ==
 
 = Target Group? =
 
+* WordPress Themes built with the [Bootstrap](http://getbootstrap.com/ "Bootstrap") framework
 * Installing this Plugin is strongly recommended for [them.es](http://them.es/ "them.es") customers who want to implement the featured Modules
     
 = What you get? =
 
-* Shortcodes: Google Maps, Contact Form, Latest Posts, Carousel, Grid, etc.
+* `Shortcodes`: Google Maps, Contact Form, Recent Posts, Carousel, Grid, etc.
+* WordPress Standard `Image Gallery hooks`, `Slider`, `Portfolio Filter`
 * Page Builder
-* WordPress Standard Image Gallery hooks, Portfolio Filter
-* TinyMCE Plugin
-* Easy Setup/Customization
+* TinyMCE Button
 * Theme Customization API (on them.es Themes!)
 
 = Compatibility? =
 
+* Some Styles and Javascripts depend on Bootstrap - __Please note that the Bootstrap components are not included in the Plugin!__
+* In order to work properly the Plugin should only be installed on systems which Themes have been built with Bootstrap
 * Tested to work with all [them.es](http://them.es/ "them.es") Themes
-* Some Styles and Javascripts depend on the Bootstrap framework - __The Bootstrap components need to be included in your Theme!__
 
 = Feedback/Help/Contribution? =
 
@@ -75,4 +76,4 @@ Updates: Minor CSS changes, Translations
 Docs: Added Dependencies and Licence information
 
 = 1.0 =
-Initial Release
+Initial Release on a GitHub repository
