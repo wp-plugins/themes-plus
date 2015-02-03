@@ -19,7 +19,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 = What you get? =
 
 * `[Shortcodes]`
-* Google Maps, Contact Form, Recent Posts, Carousel, Grid, etc.
+* Google Maps, Contact form, Recent Posts, Carousel, Grid, etc.
 * WordPress Standard Image Gallery hooks, Slider, Portfolio Filter
 * TinyMCE Button
 * Page Builder
@@ -27,43 +27,49 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Compatibility? =
 
-* Some Styles and Javascripts depend on Bootstrap - __Please note that the Bootstrap components are not included in the Plugin!__
-* In order to work properly the Plugin should only be installed on systems which Themes have been built with Bootstrap
-* Tested to work with all [them.es](http://them.es/ "them.es") Themes
+* Some Styles and Javascripts depend on Bootstrap - __Please note that the required Bootstrap components are not included in the Plugin!__
+* __In order to work properly the Plugin needs to be installed on systems with Bootstrap powered Themes__
 
 = Feedback/Help/Contribution? =
 
-* We do have a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions, and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
+* We do have a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
 
 == Screenshots ==
 
 1. TinyMCE Button
 2. Shortcodes WYSIWYG
 3. Edit a Post Element
+4. WordPress Image Gallery hooks
 
 == Installation ==
 
-1. Upload the plugin to the `/wp-content/plugins/` directory
+1. Upload the Plugin to the `/wp-content/plugins/` directory
 2. Activate it through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
-Does this plugin work with my theme?
-* The purpose of this plugin is bringing additional features to [them.es](http://them.es/ "them.es") Themes
-* Your Theme needs to be built with Bootstrap
+= Which modules are included? How can I add them to a page? =
+* __Custom Shortcodes:__ Google Maps, Contact form, Recent Posts, Content Carousels, Bootstrap Column Grid
+* Simply use the them.es+ button in the TinyMCE Editor to add a module on the page
+* __WordPress Standard Image Gallery hooks:__ Gallery Grids, Image Carousels, Panzoom (Ken Burns) Slider, Portfolio Filter
+* The WordPress Gallery hooks can be activated by creating a new Gallery, adding images and selecting the desired "Type" in the Gallery Settings
 
-How much does this plugin cost?
-* This plugin can be downloaded free of charge
+= Does this Plugin work with my Theme? =
+* The Plugin has been primarily developed to bring additional features into [them.es](http://them.es/ "them.es") Themes
+* If your WordPress Theme has been built with Bootstrap and if all Bootstrap components are included in your Theme the Plugin should work out-of-the-box
 
-Where can I get help?
-* Feel free to ask a question in the Support forums:
+= Where can I get help? =
+* You can ask questions in the Support forums:
 [https://github.com/them-es](https://github.com/them-es "GitHub")
 [http://them.es/support](http://them.es/support "them.es Support")
+
+
+* Developers who have a GitHub account are welcome to help us improve the Plugin
   
 == Upgrade Notice ==
 
 = 1.1 =
-Initial Release in the WordPress Plugin directory
+Public Release in the WordPress Plugin directory
 
 == Changelog ==
 
