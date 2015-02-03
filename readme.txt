@@ -1,6 +1,6 @@
 === them.es Plus ===
 Contributors: them.es
-Tags: bootstrap, slideshow, gallery, portfolio filter, google maps, contact form, grid
+Tags: bootstrap, slideshow, slider, gallery, portfolio filter, google maps, contact form, grid
 Requires at least: 4.0
 Tested up to: 4.1
 Stable tag: 1.1
@@ -18,10 +18,11 @@ Useful WordPress Add-ons for Themes built with Bootstrap
     
 = What you get? =
 
-* `Shortcodes`: Google Maps, Contact Form, Recent Posts, Carousel, Grid, etc.
-* WordPress Standard `Image Gallery hooks`, `Slider`, `Portfolio Filter`
-* Page Builder
+* `[Shortcodes]`
+* Google Maps, Contact Form, Recent Posts, Carousel, Grid, etc.
+* WordPress Standard Image Gallery hooks, Slider, Portfolio Filter
 * TinyMCE Button
+* Page Builder
 * Theme Customization API (on them.es Themes!)
 
 = Compatibility? =
