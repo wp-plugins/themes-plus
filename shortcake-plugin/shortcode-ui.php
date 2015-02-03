@@ -1,13 +1,6 @@
 <?php
 /*
-Plugin Name: Shortcode UI
-Plugin URI: https://github.com/fusioneng/Shortcake
-Version: v0.2.0-dev
-Description: User Interface for adding shortcodes.
-Author: Fusion Engineering and community
-Author URI: http://next.fusion.net/tag/shortcode-ui/
-Text Domain: shortcode-ui
-License: GPL v2 or later
+Shortcake, https://github.com/fusioneng/Shortcake, License: GPL v2 or later
 */
 
 /*
