@@ -3,7 +3,7 @@
  * Plugin Name: them.es Plus
  * Plugin URI: http://them.es
  * Description: "Short-code" your Bootstrap powered Theme and activate useful modules and features.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: them.es
  * Author URI: http://them.es
  * Text Domain: themes-plus
@@ -175,6 +175,24 @@ if ( !class_exists("themesPlus") ) {
                                 'type'        => 'text',
                                 'placeholder' => '',
                             ),
+                            array(
+                                'label'       => 'Marker (PNG/GIF/JPG, 128x128)',
+                                'attr'        => 'marker',
+                                'type'        => 'text',
+                                'placeholder' => 'http://',
+                            ),
+                            array(
+                                'label'       => 'Class',
+                                'attr'        => 'class',
+                                'type'        => 'text',
+                                'placeholder' => '',
+                            ),
+                            array(
+                                'label'       => 'CSS',
+                                'attr'        => 'style',
+                                'type'        => 'text',
+                                'placeholder' => '',
+                            ),
                         ),
                     )
                 );
@@ -222,9 +240,16 @@ if ( !class_exists("themesPlus") ) {
                         'listItemImage' => 'dashicons-email-alt',
                         'attrs' => array(
                             array(
-                                'label'       => 'No customization possible!',
-                                'attr'        => '',
-                                'type'        => 'checkbox'
+                                'label'       => 'Class',
+                                'attr'        => 'class',
+                                'type'        => 'text',
+                                'placeholder' => '',
+                            ),
+                            array(
+                                'label'       => 'CSS',
+                                'attr'        => 'style',
+                                'type'        => 'text',
+                                'placeholder' => '',
                             ),
                         ),
                     )

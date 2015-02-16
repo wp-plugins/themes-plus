@@ -101,10 +101,11 @@
 .content-grid {
     
     &.row {
-        
-        margin-top: -1px;
 
         [class*="col"] {
+            
+            margin-top: -1px;
+            margin-right: -1px;
 
             img {
                 max-width: 100%;
@@ -140,7 +141,7 @@
 	overflow: hidden;
 	background-color: @gray-lighter;
 	
-	#map {
+	#map-canvas {
 		width: 100%;
 		height: 100%;
 	}
@@ -173,10 +174,13 @@
     a {
         position: relative;
         opacity: 1;
+        display: block;
+        background-color: #000;
         .transition(all .25s ease);
 
         &:before {
             content: "+";
+            z-index: 1000;
             opacity: 0;
             color: #FFF;
             position: absolute;
@@ -191,7 +195,10 @@
         }
         
         &:hover {
-            opacity: @opacity;
+            
+            img {
+                opacity: @opacity;
+            }
             
             &:before {
                 opacity: 1;
@@ -347,7 +354,7 @@
     img {
         max-width: 100%;
         height: auto;
-        margin-bottom: @margin-grid;
+        border-bottom: @margin-grid solid #FFF;
     }
     
     .column { float: left; }
@@ -359,7 +366,7 @@
 
 .grid-stacked {
     
-	background: #FFF;
+	background-color: #FFF;
 	overflow: hidden;
     
     a, span {

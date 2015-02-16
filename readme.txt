@@ -3,7 +3,7 @@ Contributors: them.es
 Tags: bootstrap, slideshow, slider, gallery, portfolio filter, google maps, contact form, grid
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Feedback/Help/Contribution? =
 
-* We do have a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
+* The Development of this Plugin can be followed via a GitHub repository <3 and are happy to receive feedback, questions, feature suggestions and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
 
 == Screenshots ==
 
@@ -50,9 +50,11 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Which modules are included? How can I add them to a page? =
 * __Custom Shortcodes:__ Google Maps, Contact form, Recent Posts, Content Carousels, Bootstrap Column Grid
-  * _Simply use the them.es+ button in the TinyMCE Editor to add a module on the page_
+  * _Use the them.es+ button in the TinyMCE Editor to add a module on the page_
 * __WordPress Standard Image Gallery hooks:__ Gallery Grids, Image Carousels, Panzoom (Ken Burns) Slider, Portfolio Filter
-  * _The WordPress Gallery hooks can be activated by creating a new Gallery, adding images and selecting the desired "Type" in the Gallery Settings_
+  * _Gallery hooks can be activated by creating a new Gallery, adding images and selecting the desired "Type" in the settings_
+* __Portfolio Filter:__
+  * _Upload all images which should appear in the Portfolio and name/tag them accordingly. Create a new WordPress Gallery and select Type "Portfolio Filter"_
 
 = Does this Plugin work with my Theme? =
 * The Plugin has been primarily developed to bring additional features into [them.es](http://them.es/ "them.es") Themes
@@ -62,15 +64,23 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 * You can ask questions in the Support forums
   * [https://github.com/them-es](https://github.com/them-es "GitHub")
   * [http://them.es/support](http://them.es/support "them.es Support")
-* Developers are welcome to help us improve the Plugin via [GitHub](https://github.com/them-es "GitHub")
+* WordPress developers are welcome to help us improve the Plugin via [GitHub](https://github.com/them-es "GitHub")
   
 == Upgrade Notice ==
+
+= 1.1.1 =
+* Support for custom Marker images in Maps
 
 = 1.1 =
 * Public Release in the WordPress Plugin directory
 * Updated documentation
 
 == Changelog ==
+
+= 1.1.1 =
+* New feature: Maps now support a Marker image URL attribute, Contact form and Map shortcodes now allow custom class/style attributes
+* Updates: Shortcake Plugin, JS changes
+* Minor bugfixes
 
 = 1.1 =
 * New feature: Integrated the Shortcake Plugin

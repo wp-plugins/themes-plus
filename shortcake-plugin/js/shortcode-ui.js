@@ -326,7 +326,7 @@ var Shortcode_UI;
 
 			return this;
 		},
-		
+
 		/**
 		 * Switches tab when previewing or editing
 		 */
@@ -415,6 +415,7 @@ var Shortcode_UI;
 
 		events: {
 			'keyup  input[type="text"]':   'updateValue',
+			'keyup  input[type="hidden"]': 'updateValue',
 			'keyup  textarea':             'updateValue',
 			'change select':               'updateValue',
 			'change input[type=checkbox]': 'updateValue',
@@ -438,7 +439,11 @@ var Shortcode_UI;
 		 */
 		updateValue: function( e ) {
 			var $el = $(this.el).find( '[name=' + this.model.get( 'attr' ) + ']' );
-			this.model.set( 'value', $el.val() );
+			if ( 'checkbox' === this.model.attributes.type ) {
+				this.model.set( 'value', $el.is( ':checked' ) );
+			} else {
+				this.model.set( 'value', $el.val() );
+			}
 		},
 
 	} );
@@ -590,12 +595,12 @@ var Shortcode_UI;
 			var view = new sui.views.TabbedView({
 				tabs: {
 					edit: {
-						label: shortcodeUIData.modalOptions.edit_tab_label,
+						label: shortcodeUIData.strings.edit_tab_label,
 						content: new sui.views.EditShortcodeForm({ model: shortcode })
 					},
 
 					preview: {
-						label: shortcodeUIData.modalOptions.preview_tab_label,
+						label: shortcodeUIData.strings.preview_tab_label,
 						content: new sui.views.ShortcodePreview({ model: shortcode }),
 						open: function() {
 							this.render();
@@ -657,7 +662,9 @@ var Shortcode_UI;
 		},
 
 		refresh: function() {
-			// @todo Need to trigger disabled state on button.
+			if ( this.frame && this.frame.toolbar ) {
+				this.frame.toolbar.get().refresh();
+			}
 		},
 
 		insert: function() {
@@ -690,14 +697,14 @@ var Shortcode_UI;
 				router  : false,
 				toolbar : id + '-toolbar',
 				menu    : 'default',
-				title   : shortcodeUIData.modalOptions.media_frame_menu_insert_label,
+				title   : shortcodeUIData.strings.media_frame_menu_insert_label,
 				tabs    : [ 'insert' ],
 				priority:  66,
 				content : id + '-content-insert',
 			};
 
 			if ( 'currentShortcode' in this.options ) {
-				opts.title = shortcodeUIData.modalOptions.media_frame_menu_update_label;
+				opts.title = shortcodeUIData.strings.media_frame_menu_update_label;
 			}
 
 			var controller = new sui.controllers.MediaController( opts );
@@ -728,12 +735,12 @@ var Shortcode_UI;
 		toolbarRender: function( toolbar ) {},
 
 		toolbarCreate : function( toolbar ) {
-			var text = shortcodeUIData.modalOptions.media_frame_toolbar_insert_label;
+			var text = shortcodeUIData.strings.media_frame_toolbar_insert_label;
 			if ( 'currentShortcode' in this.options ) {
-				text = shortcodeUIData.modalOptions.media_frame_toolbar_update_label;
+				text = shortcodeUIData.strings.media_frame_toolbar_update_label;
 			}
 
-			toolbar.view = new  wp.media.view.Toolbar( {
+			toolbar.view = new  sui.views.Toolbar( {
 				controller : this,
 				items: {
 					insert: {
@@ -777,6 +784,29 @@ var Shortcode_UI;
 		},
 
 	});
+	
+	/**
+	 * sui Toolbar view that extends wp.media.view.Toolbar
+	 * to define cusotm refresh method
+	 */
+	sui.views.Toolbar = wp.media.view.Toolbar.extend({
+		initialize: function() {
+			_.defaults( this.options, {
+				requires: false
+			});
+			// Call 'initialize' directly on the parent class.
+			wp.media.view.Toolbar.prototype.initialize.apply( this, arguments );
+		},
+
+		refresh: function() {
+			var action = this.controller.state().props.get('action');
+			this.get('insert').model.set( 'disabled', action == 'select' );
+			/**
+			 * call 'refresh' directly on the parent class
+			 */
+			wp.media.view.Toolbar.prototype.refresh.apply( this, arguments );
+		}
+	});
 
 	/**
 	 * Generic shortcode mce view constructor.
@@ -815,165 +845,26 @@ var Shortcode_UI;
 
 				this.shortcode = shortcode;
 
+				this.fetch();
 			},
 
-			/**
-			 * @see wp.mce.View.getEditors
-			 */
-			getEditors: function( callback ) {
-				var editors = [];
+			fetch: function() {
 
-				_.each( tinymce.editors, function( editor ) {
-					if ( editor.plugins.wpview ) {
-						if ( callback ) {
-							callback( editor );
-						}
+				var self = this;
 
-						editors.push( editor );
-					}
-				}, this );
-
-				return editors;
-			},
-
-			/**
-			 * @see wp.mce.View.getNodes
-			 */
-			getNodes: function( callback ) {
-				var nodes = [],
-					self = this;
-
-				this.getEditors( function( editor ) {
-					$( editor.getBody() )
-					.find( '[data-wpview-text="' + self.encodedText + '"]' )
-					.each( function ( i, node ) {
-						if ( callback ) {
-							callback( editor, node, $( node ).find( '.wpview-content' ).get( 0 ) );
-						}
-
-						nodes.push( node );
-					} );
+				wp.ajax.post( 'do_shortcode', {
+					post_id: $( '#post_ID' ).val(),
+					shortcode: this.shortcode.formatShortcode(),
+					nonce: shortcodeUIData.nonces.preview,
+				}).done( function( response ) {
+					self.parsed = response;
+					self.render( true );
+				}).fail( function() {
+					self.parsed = '<span class="shortcake-error">' + shortcodeUIData.strings.mce_view_error + '</span>';
+					self.render( true );
 				} );
 
-				return nodes;
-			},
-
-			/**
-			 * Set the HTML. Modeled after wp.mce.View.setIframes
-			 *
-			 * If it includes a script tag, needs to be wrapped in an iframe
-			 */
-			setHtml: function( body ) {
-				var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-
-				if ( body.indexOf( '<script' ) === -1 ) {
-					this.shortcodeHTML = body;
-					this.render( true );
-					return;
-				}
-
-				this.getNodes( function ( editor, node, content ) {
-					var dom = editor.dom,
-					styles = '',
-					bodyClasses = editor.getBody().className || '',
-					iframe, iframeDoc, i, resize;
-
-					content.innerHTML = '';
-					head = '';
-
-					$(node).addClass('wp-mce-view-show-toolbar');
-
-					if ( ! wp.mce.views.sandboxStyles ) {
-						tinymce.each( dom.$( 'link[rel="stylesheet"]', editor.getDoc().head ), function( link ) {
-							if ( link.href && link.href.indexOf( 'skins/lightgray/content.min.css' ) === -1 &&
-								link.href.indexOf( 'skins/wordpress/wp-content.css' ) === -1 ) {
-
-								styles += dom.getOuterHTML( link ) + '\n';
-							}
-						});
-
-						wp.mce.views.sandboxStyles = styles;
-					} else {
-						styles = wp.mce.views.sandboxStyles;
-					}
-
-					// Seems Firefox needs a bit of time to insert/set the view nodes, or the iframe will fail
-					// especially when switching Text => Visual.
-					setTimeout( function() {
-						iframe = dom.add( content, 'iframe', {
-							src: tinymce.Env.ie ? 'javascript:""' : '',
-							frameBorder: '0',
-							allowTransparency: 'true',
-							scrolling: 'no',
-							'class': 'wpview-sandbox',
-							style: {
-								width: '100%',
-								display: 'block'
-							}
-						} );
-
-						iframeDoc = iframe.contentWindow.document;
-
-						iframeDoc.open();
-						iframeDoc.write(
-							'<!DOCTYPE html>' +
-							'<html>' +
-								'<head>' +
-									'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />' +
-									head +
-									styles +
-									'<style>' +
-										'html {' +
-											'background: transparent;' +
-											'padding: 0;' +
-											'margin: 0;' +
-										'}' +
-										'body#wpview-iframe-sandbox {' +
-											'background: transparent;' +
-											'padding: 1px 0 !important;' +
-											'margin: -1px 0 0 !important;' +
-										'}' +
-										'body#wpview-iframe-sandbox:before,' +
-										'body#wpview-iframe-sandbox:after {' +
-											'display: none;' +
-											'content: "";' +
-										'}' +
-									'</style>' +
-								'</head>' +
-								'<body id="wpview-iframe-sandbox" class="' + bodyClasses + '">' +
-									body +
-								'</body>' +
-							'</html>'
-						);
-						iframeDoc.close();
-
-						resize = function() {
-							// Make sure the iframe still exists.
-							iframe.contentWindow && $( iframe ).height( $( iframeDoc.body ).height() );
-						};
-
-						if ( MutationObserver ) {
-							new MutationObserver( _.debounce( function() {
-								resize();
-							}, 100 ) )
-							.observe( iframeDoc.body, {
-								attributes: true,
-								childList: true,
-								subtree: true
-							} );
-						} else {
-							for ( i = 1; i < 6; i++ ) {
-								setTimeout( resize, i * 700 );
-							}
-						}
-
-						editor.on( 'wp-body-class-change', function() {
-							iframeDoc.body.className = editor.getBody().className;
-						});
-					}, 50 );
-				});
-
-			},
+ 			},
 
 			/**
 			 * Render the shortcode
@@ -982,24 +873,7 @@ var Shortcode_UI;
 			 * @return string html
 			 */
 			getHtml: function() {
-
-				var data;
-
-				if ( false === this.shortcodeHTML ) {
-
-					data = {
-						action: 'do_shortcode',
-						post_id: $('#post_ID').val(),
-						shortcode: this.shortcode.formatShortcode(),
-						nonce: shortcodeUIData.nonces.preview
-					};
-
-					$.post( ajaxurl, data, $.proxy( this.setHtml, this ) );
-
-				}
-
-				return this.shortcodeHTML;
-
+				return this.parsed;
 			}
 
 		},
@@ -1075,14 +949,14 @@ var Shortcode_UI;
 		sui.shortcodes = new sui.collections.Shortcodes( shortcodeUIData.shortcodes )
 
 		sui.shortcodes.each( function( shortcode ) {
-
-			// Register the mce view for each shortcode.
-			// Note - clone the constructor.
-			wp.mce.views.register(
-				shortcode.get('shortcode_tag'),
-				$.extend( true, {}, sui.utils.shortcodeViewConstructor )
-			);
-
+			if( wp.mce.views ) {
+				// Register the mce view for each shortcode.
+				// Note - clone the constructor.
+				wp.mce.views.register(
+					shortcode.get('shortcode_tag'),
+					$.extend( true, {}, sui.utils.shortcodeViewConstructor )
+				);
+			}
 		} );
 
 	});
