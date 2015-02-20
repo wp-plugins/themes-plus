@@ -12,7 +12,7 @@ For more information, check out [them.es](http://them.es/).
 ## What's included?
 * Shortcodes
 * Page Builder / TinyMCE Plugin
-* Bootstrap components: Grid, Galleries, Carousels
+* Bootstrap components: Grid, Galleries, Carousels, Count down to date, Funny Count up stats
 * WordPress hooks: Transform Standard WordPress Galleries into slideshows and even more
 * Portfolio Filter
 * Google Maps
@@ -50,14 +50,45 @@ All Shortcodes are documented in the Theme demos and can be included via a Page 
     <td></td>
 </tr>
 <tr>
+    <td><strong>Count down to Date</strong></td>
+    <td>
+        <pre><code>[countdown]January 01, 2020 12:00:00[/countdown]</code></pre>
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td><strong>Count up Stats</strong></td>
+    <td>
+        <pre><code>[countup]256[/countup]</code></pre>
+Common example using the grid:
+        <pre>
+        <code>
+[row class="text-center"]
+  [col][countup]657[/countup] Projects delivered[/col]
+  [col][countup]46[/countup] Awards[/col]
+  [col][countup]231[/countup] Fans[/col]
+  [col][countup]3756[/countup] Cups of coffee[/col]
+[/row]
+        </code>
+        </pre>
+    </td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
     <td><strong>Content Carousel</strong></td>
     <td>
         <pre>
         <code>
 [carousel]
-  [item]Slide 1. Lorem ipsum dolor sit amet...[/item]
-  [item]Slide 2. Lorem ipsum dolor sit amet...[/item]
-  [item]Slide 3. Lorem ipsum dolor sit amet...[/item]
+  [carouselslide]Slide 1. Lorem ipsum dolor sit amet...[/carouselslide]
+  [carouselslide]Slide 2. Lorem ipsum dolor sit amet...[/carouselslide]
+  [carouselslide]Slide 3. Lorem ipsum dolor sit amet...[/carouselslide]
   etc.
 [/carousel]
         </code>
@@ -174,6 +205,8 @@ All Shortcodes are documented in the Theme demos and can be included via a Page 
 
 * [Shortcake Plugin](https://github.com/fusioneng/Shortcake), [GPLv2+](https://github.com/fusioneng/Shortcake/blob/master/LICENSE)
 * [Bootstrap](https://github.com/twbs/bootstrap), [MIT licence](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+* [jquery-countTo](https://github.com/mhuggins/jquery-countTo), [MIT licence](https://github.com/mhuggins/jquery-countTo/blob/master/LICENSE.txt)
+* [jCountdown](https://github.com/tomgrohl/jCountdown), [MIT licence](https://github.com/tomgrohl/jCountdown/blob/master/license.txt)
 * [Shuffle.js](https://github.com/Vestride/Shuffle), [MIT licence](https://github.com/Vestride/Shuffle/blob/master/LICENSE)
 * [Salvattore](https://github.com/rnmp/salvattore), [MIT licence](https://github.com/rnmp/salvattore/blob/master/LICENSE)
 * [Google Maps API](https://developers.google.com/maps), [Proprietary licence](https://developers.google.com/maps/licensing)

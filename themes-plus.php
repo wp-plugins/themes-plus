@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: them.es Plus
- * Plugin URI: http://them.es
+ * Plugin URI: https://wordpress.org/plugins/themes-plus
  * Description: "Short-code" your Bootstrap powered Theme and activate useful modules and features.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: them.es
  * Author URI: http://them.es
  * Text Domain: themes-plus
@@ -30,6 +30,7 @@ if ( !class_exists("themesPlus") ) {
                 
             }
             add_action('init', 'themesPlus_init');
+            
             
             function themesPlus_load_textdomain() {
                 
@@ -308,6 +309,91 @@ if ( !class_exists("themesPlus") ) {
                                 'attr'        => 'number',
                                 'type'        => 'text',
                                 'placeholder' => '5',
+                            ),
+                        ),
+                    )
+                );
+            }
+            
+            
+        /**
+         * Count down to date: JQuery Plugin + Code initialized in "themesPlus_init"
+         * 
+         * Shortcode:
+         * [countdown]January 25, 2020 12:00:00[/countdown]
+         */
+
+            // Datetime: [countdown]January 25, 2020 12:00:00[/countdown]
+            function themes_countdown_shortcode( $atts = array(), $content = null ) {
+                
+                wp_register_script( 'countdowninit', plugins_url( '/js/countdown.min.js', __FILE__ ), array('jquery'), '1.0', false );
+                wp_enqueue_script( 'countdowninit' );
+                
+                $datetime = do_shortcode( shortcode_unautop( $content ) );
+                
+                return '<h3 id="countdown" class="h1 countdown" data-to="' . $datetime .'" data-offset="' . get_option('gmt_offset') . '" data-rtl="' . ( is_rtl() ? 'true' : 'false' ) . '">' . $datetime . ', UTC ' . get_option('gmt_offset') . '</h3>'; // If $content contains a shortcode, that code will get processed
+                
+            }
+            add_shortcode( 'countdown', 'themes_countdown_shortcode' );
+            
+        /**
+         * Register a TinyMCE UI for the Shortcode
+         * External Plugin "Shortcode UI" required: https://github.com/fusioneng/Shortcake
+         */
+            if (function_exists('shortcode_ui_register_for_shortcode')) {
+                shortcode_ui_register_for_shortcode(
+                    'countdown',
+                    array(
+                        'label' => 'Timestamp',
+                        //'listItemImage' => 'dashicons-editor-quote',
+                        'attrs' => array(
+                            array(
+                                'label'       => 'Content',
+                                'description' => 'Timezone: UTC ' . get_option('gmt_offset') . ' ' . get_option('timezone_string'),
+                                'attr'        => 'content',
+                                'type'        => 'text',
+                                'placeholder' => 'Timestamp',
+                            ),
+                        ),
+                    )
+                );
+            }
+            
+            
+        /**
+         * Stats Counter: JQuery Plugin + Code initialized in "themesPlus_init"
+         * 
+         * Shortcode:
+         * [countup]###[/countup]
+         */
+
+            // Number: [countup]###[/countup]
+            function themes_countup_shortcode( $atts = array(), $content = null ) {
+                
+                wp_register_script( 'counttoinit', plugins_url( '/js/countto.min.js', __FILE__ ), array('jquery'), '1.0', false );
+                wp_enqueue_script( 'counttoinit' );
+                
+                return '<h3 class="countup h1" data-to="' . do_shortcode( shortcode_unautop( $content ) ) .'" data-speed="2500">' . do_shortcode( shortcode_unautop( $content ) ) .'</h3>'; // If $content contains a shortcode, that code will get processed
+                
+            }
+            add_shortcode( 'countup', 'themes_countup_shortcode' );
+            
+        /**
+         * Register a TinyMCE UI for the Shortcode
+         * External Plugin "Shortcode UI" required: https://github.com/fusioneng/Shortcake
+         */
+            if (function_exists('shortcode_ui_register_for_shortcode')) {
+                shortcode_ui_register_for_shortcode(
+                    'countup',
+                    array(
+                        'label' => 'Number',
+                        //'listItemImage' => 'dashicons-editor-quote',
+                        'attrs' => array(
+                            array(
+                                'label'       => 'Content',
+                                'attr'        => 'content',
+                                'type'        => 'text',
+                                'placeholder' => '100',
                             ),
                         ),
                     )
