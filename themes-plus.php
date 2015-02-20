@@ -329,9 +329,9 @@ if ( !class_exists("themesPlus") ) {
                 wp_register_script( 'countdowninit', plugins_url( '/js/countdown.min.js', __FILE__ ), array('jquery'), '1.0', false );
                 wp_enqueue_script( 'countdowninit' );
                 
-                $datetime = do_shortcode( shortcode_unautop( $content ) );
+                $datetime = do_shortcode( shortcode_unautop( $content ) ); // If $content contains a shortcode, that code will get processed
                 
-                return '<h3 id="countdown" class="h1 countdown" data-to="' . $datetime .'" data-offset="' . get_option('gmt_offset') . '" data-rtl="' . ( is_rtl() ? 'true' : 'false' ) . '">' . $datetime . ', UTC ' . get_option('gmt_offset') . '</h3>'; // If $content contains a shortcode, that code will get processed
+                return '<h3 id="countdown" class="h1 countdown" data-to="' . $datetime .'" data-offset="' . get_option('gmt_offset') . '" data-rtl="' . ( is_rtl() ? 'true' : 'false' ) . '">' . $datetime . ', UTC ' . get_option('gmt_offset') . '</h3>';
                 
             }
             add_shortcode( 'countdown', 'themes_countdown_shortcode' );
@@ -373,7 +373,9 @@ if ( !class_exists("themesPlus") ) {
                 wp_register_script( 'counttoinit', plugins_url( '/js/countto.min.js', __FILE__ ), array('jquery'), '1.0', false );
                 wp_enqueue_script( 'counttoinit' );
                 
-                return '<h3 class="countup h1" data-to="' . do_shortcode( shortcode_unautop( $content ) ) .'" data-speed="2500">' . do_shortcode( shortcode_unautop( $content ) ) .'</h3>'; // If $content contains a shortcode, that code will get processed
+                $timer = do_shortcode( shortcode_unautop( $content ) ); // If $content contains a shortcode, that code will get processed
+                
+                return '<h3 class="countup h1" data-to="' . $timer .'" data-speed="2500">' . $timer .'</h3>';
                 
             }
             add_shortcode( 'countup', 'themes_countup_shortcode' );
@@ -406,8 +408,8 @@ if ( !class_exists("themesPlus") ) {
          * 
          * Shortcode:
          * [carousel]
-         *   [item]Lorem ipsum...[/item]
-         *   [item]Lorem ipsum...[/item]
+         *   [carouselslide]Lorem ipsum...[/carouselslide]
+         *   [carouselslide]Lorem ipsum...[/carouselslide]
          * [/carousel]
          */
             function themes_carousel_shortcode( $atts = array(), $content = null ) {
@@ -425,8 +427,8 @@ if ( !class_exists("themesPlus") ) {
             }
             add_shortcode( 'carousel', 'themes_carousel_shortcode' );
             
-            // Carousel-items: [item]...[/item]
-            function themes_carouselitem_shortcode( $atts = array(), $content = null ) {
+            // Carousel-slides: [carouselslide]...[/carouselslide]
+            function themes_carouselslide_shortcode( $atts = array(), $content = null ) {
                 
                 // Get Attributes
                 extract(shortcode_atts(array(
@@ -434,20 +436,20 @@ if ( !class_exists("themesPlus") ) {
                     'style' => ''
                 ), $atts));
                 
-                if( isset($GLOBALS['carouselitem_count']) ) {
+                if( isset($GLOBALS['carouselslide_count']) ) {
                     
-                    if( $GLOBALS['carouselitem_count'] == 0 ) {
-                        $class .= " active"; // first item
+                    if( $GLOBALS['carouselslide_count'] == 0 ) {
+                        $class .= " active"; // first slide
                     }
                     
-                    $GLOBALS['carouselitem_count']++;
+                    $GLOBALS['carouselslide_count']++;
                     
                 }
                 
                 return '<div class="item' . ( $class ? ' ' . $class : '' ) . '"' . ( $style ? ' style="' . $style . '"' : '' ) . '>' . do_shortcode( shortcode_unautop( $content ) ) . '</div>';
                 
             }
-            add_shortcode( 'item', 'themes_carouselitem_shortcode' );
+            add_shortcode( 'carouselslide', 'themes_carouselslide_shortcode' );
             
         /**
          * Register a TinyMCE UI for the Shortcode
@@ -455,9 +457,9 @@ if ( !class_exists("themesPlus") ) {
          */
             if (function_exists('shortcode_ui_register_for_shortcode')) {
                 shortcode_ui_register_for_shortcode(
-                    'item',
+                    'carouselslide',
                     array(
-                        'label' => 'item',
+                        'label' => 'carouselslide',
                         //'listItemImage' => 'dashicons-editor-quote',
                         'attrs' => array(
                             array(
