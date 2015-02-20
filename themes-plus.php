@@ -420,7 +420,7 @@ if ( !class_exists("themesPlus") ) {
                     'style' => ''
                 ), $atts));
                 
-                $GLOBALS['carouselitem_count'] = 0;
+                $GLOBALS['carouselslide_count'] = 0;
                 
                 return '<div id="slider" class="carousel slide ' . ( $class ? ' ' . $class : '' ) . '"' . ( $style ? ' style="' . $style . '"' : '' ) . ' data-interval="false"><div class="carousel-inner" role="listbox">' . do_shortcode($content) . '</div> <a class="left carousel-control" href="#slider" role="button" data-slide="prev"><span class="dashicons dashicons-arrow-left-alt2"></span></a> <a class="right carousel-control" href="#slider" role="button" data-slide="next"><span class="dashicons dashicons-arrow-right-alt2"></span></a></div>'; // If $content contains a shortcode, that code will get processed. Dashicons need to be activated via wp_enqueue_style( 'dashicons' );
                 
