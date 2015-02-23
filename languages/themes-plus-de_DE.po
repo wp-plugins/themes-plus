@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: them.es Plus v1.0\n"
+"Project-Id-Version: them.es Plus v1.1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-02-02 09:17:44+0000\n"
+"PO-Revision-Date: 2015-02-22 06:53:24+0000\n"
 "Last-Translator: them-es <themes@klicc.at>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,182 +20,406 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: inc/contactform.php:15
+#: inc/contactform.php:21
+#: tmp/svn/tags/1.0/inc/contactform.php:15
+#: tmp/svn/tags/1.1/inc/contactform.php:15
+#: tmp/svn/tags/1.1.1/inc/contactform.php:21
+#: tmp/svn/tags/1.1.2/inc/contactform.php:21
+#: tmp/svn/trunk/inc/contactform.php:21
 #@ themes-plus
 msgid "All fields are required!"
 msgstr "Alle Felder werden benötigt!"
 
-#: inc/contactform.php:21
+#: inc/contactform.php:27
+#: tmp/svn/tags/1.0/inc/contactform.php:21
+#: tmp/svn/tags/1.1/inc/contactform.php:21
+#: tmp/svn/tags/1.1.1/inc/contactform.php:27
+#: tmp/svn/tags/1.1.2/inc/contactform.php:27
+#: tmp/svn/trunk/inc/contactform.php:27
 #@ themes-plus
 msgid "Please check your Email address!"
 msgstr "Bitte überprüfen Sie Ihre E-Mail-Adresse!"
 
-#: inc/contactform.php:28
+#: inc/contactform.php:34
+#: tmp/svn/tags/1.0/inc/contactform.php:28
+#: tmp/svn/tags/1.1/inc/contactform.php:28
+#: tmp/svn/tags/1.1.1/inc/contactform.php:34
+#: tmp/svn/tags/1.1.2/inc/contactform.php:34
+#: tmp/svn/trunk/inc/contactform.php:34
 #@ themes-plus
 msgid "Please enter your name!"
 msgstr "Bitte geben Sie Ihren Namen ein!"
 
-#: inc/contactform.php:35
-#: inc/contactform.php:70
-#: inc/contactform.php:72
+#: inc/contactform.php:41
+#: inc/contactform.php:79
+#: tmp/svn/tags/1.0/inc/contactform.php:35
+#: tmp/svn/tags/1.0/inc/contactform.php:70
+#: tmp/svn/tags/1.0/inc/contactform.php:72
+#: tmp/svn/tags/1.1/inc/contactform.php:35
+#: tmp/svn/tags/1.1/inc/contactform.php:70
+#: tmp/svn/tags/1.1/inc/contactform.php:72
+#: tmp/svn/tags/1.1.1/inc/contactform.php:41
+#: tmp/svn/tags/1.1.1/inc/contactform.php:79
+#: tmp/svn/tags/1.1.2/inc/contactform.php:41
+#: tmp/svn/tags/1.1.2/inc/contactform.php:79
+#: tmp/svn/trunk/inc/contactform.php:41
+#: tmp/svn/trunk/inc/contactform.php:79
 #@ themes-plus
 msgid "Name"
 msgstr ""
 
-#: inc/contactform.php:36
-#: inc/contactform.php:77
-#: inc/contactform.php:79
+#: inc/contactform.php:42
+#: inc/contactform.php:83
+#: tmp/svn/tags/1.0/inc/contactform.php:36
+#: tmp/svn/tags/1.0/inc/contactform.php:77
+#: tmp/svn/tags/1.0/inc/contactform.php:79
+#: tmp/svn/tags/1.1/inc/contactform.php:36
+#: tmp/svn/tags/1.1/inc/contactform.php:77
+#: tmp/svn/tags/1.1/inc/contactform.php:79
+#: tmp/svn/tags/1.1.1/inc/contactform.php:42
+#: tmp/svn/tags/1.1.1/inc/contactform.php:83
+#: tmp/svn/tags/1.1.2/inc/contactform.php:42
+#: tmp/svn/tags/1.1.2/inc/contactform.php:83
+#: tmp/svn/trunk/inc/contactform.php:42
+#: tmp/svn/trunk/inc/contactform.php:83
 #@ themes-plus
 msgid "Email"
 msgstr "E-Mail"
 
-#: inc/contactform.php:37
-#: inc/contactform.php:84
-#: inc/contactform.php:86
+#: inc/contactform.php:43
+#: inc/contactform.php:87
+#: tmp/svn/tags/1.0/inc/contactform.php:37
+#: tmp/svn/tags/1.0/inc/contactform.php:84
+#: tmp/svn/tags/1.0/inc/contactform.php:86
+#: tmp/svn/tags/1.1/inc/contactform.php:37
+#: tmp/svn/tags/1.1/inc/contactform.php:84
+#: tmp/svn/tags/1.1/inc/contactform.php:86
+#: tmp/svn/tags/1.1.1/inc/contactform.php:43
+#: tmp/svn/tags/1.1.1/inc/contactform.php:87
+#: tmp/svn/tags/1.1.2/inc/contactform.php:43
+#: tmp/svn/tags/1.1.2/inc/contactform.php:87
+#: tmp/svn/trunk/inc/contactform.php:43
+#: tmp/svn/trunk/inc/contactform.php:87
 #@ themes-plus
 msgid "Message"
 msgstr "Nachricht"
 
-#: inc/contactform.php:61
+#: inc/contactform.php:67
+#: tmp/svn/tags/1.0/inc/contactform.php:61
+#: tmp/svn/tags/1.1/inc/contactform.php:61
+#: tmp/svn/tags/1.1.1/inc/contactform.php:67
+#: tmp/svn/tags/1.1.2/inc/contactform.php:67
+#: tmp/svn/trunk/inc/contactform.php:67
 #@ themes-plus
 msgid "Thanks, "
 msgstr "Danke, "
 
-#: inc/contactform.php:61
+#: inc/contactform.php:67
+#: tmp/svn/tags/1.0/inc/contactform.php:61
+#: tmp/svn/tags/1.1/inc/contactform.php:61
+#: tmp/svn/tags/1.1.1/inc/contactform.php:67
+#: tmp/svn/tags/1.1.2/inc/contactform.php:67
+#: tmp/svn/trunk/inc/contactform.php:67
 #@ themes-plus
 msgid "Your Email was successfully sent!"
 msgstr "Ihre Nachricht wurde gesendet!"
 
-#: inc/contactform.php:63
+#: inc/contactform.php:69
+#: tmp/svn/tags/1.0/inc/contactform.php:63
+#: tmp/svn/tags/1.1/inc/contactform.php:63
+#: tmp/svn/tags/1.1.1/inc/contactform.php:69
+#: tmp/svn/tags/1.1.2/inc/contactform.php:69
+#: tmp/svn/trunk/inc/contactform.php:69
 #@ themes-plus
 msgid "There was an error sending your Email!"
 msgstr "Fehler beim Senden der Nachricht!"
 
-#: inc/contactform.php:94
+#: inc/contactform.php:93
+#: tmp/svn/tags/1.0/inc/contactform.php:94
+#: tmp/svn/tags/1.1/inc/contactform.php:94
+#: tmp/svn/tags/1.1.1/inc/contactform.php:93
+#: tmp/svn/tags/1.1.2/inc/contactform.php:93
+#: tmp/svn/trunk/inc/contactform.php:93
 #@ themes-plus
 msgid "Send a copy of this Email to yourself"
 msgstr "Eine Kopie dieser Nachricht erhalten"
 
-#: inc/contactform.php:103
+#: inc/contactform.php:100
+#: tmp/svn/tags/1.0/inc/contactform.php:103
+#: tmp/svn/tags/1.1/inc/contactform.php:103
+#: tmp/svn/tags/1.1.1/inc/contactform.php:100
+#: tmp/svn/tags/1.1.2/inc/contactform.php:100
+#: tmp/svn/trunk/inc/contactform.php:100
 #@ themes-plus
 msgid "Send"
 msgstr "Senden"
 
 #: inc/gallery_mod.php:8
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:8
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:8
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:8
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:8
+#: tmp/svn/trunk/inc/gallery_mod.php:8
 #@ themes-plus
 msgid "Type"
 msgstr "Typ"
 
 #: inc/gallery_mod.php:10
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:10
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:10
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:10
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:10
+#: tmp/svn/trunk/inc/gallery_mod.php:10
 #@ themes-plus
 msgid "Default"
 msgstr "Standard"
 
 #: inc/gallery_mod.php:11
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:11
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:11
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:11
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:11
+#: tmp/svn/trunk/inc/gallery_mod.php:11
 #@ themes-plus
 msgid "Grid"
 msgstr ""
 
 #: inc/gallery_mod.php:12
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:12
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:12
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:12
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:12
+#: tmp/svn/trunk/inc/gallery_mod.php:12
 #@ themes-plus
 msgid "Grid Stacked (9 items)"
 msgstr ""
 
 #: inc/gallery_mod.php:13
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:13
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:13
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:13
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:13
+#: tmp/svn/trunk/inc/gallery_mod.php:13
 #@ themes-plus
 msgid "Carousel"
 msgstr ""
 
 #: inc/gallery_mod.php:14
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:14
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:14
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:14
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:14
+#: tmp/svn/trunk/inc/gallery_mod.php:14
 #@ themes-plus
 msgid "PanZoom"
 msgstr ""
 
-#: inc/map.php:40
+#: inc/map.php:45
+#: tmp/svn/tags/1.0/inc/map.php:40
+#: tmp/svn/tags/1.1/inc/map.php:40
+#: tmp/svn/tags/1.1.1/inc/map.php:45
+#: tmp/svn/tags/1.1.2/inc/map.php:45
+#: tmp/svn/trunk/inc/map.php:45
 #@ themes-plus
 msgid "Lat/Lng undefined. Please add the coordinates in the Page Settings!"
 msgstr "Lat/Lng nicht definiert. Bitte geben Sie die Koordinaten in den Seiten Einstellungen ein!"
 
-#: themes-plus.php:143
-#: themes-plus.php:198
+#: themes-plus.php:150
+#: themes-plus.php:225
+#: tmp/svn/tags/1.0/themes-plus.php:143
+#: tmp/svn/tags/1.0/themes-plus.php:198
+#: tmp/svn/tags/1.1/themes-plus.php:149
+#: tmp/svn/tags/1.1/themes-plus.php:206
+#: tmp/svn/tags/1.1.1/themes-plus.php:149
+#: tmp/svn/tags/1.1.1/themes-plus.php:224
+#: tmp/svn/tags/1.1.2/themes-plus.php:150
+#: tmp/svn/tags/1.1.2/themes-plus.php:225
+#: tmp/svn/trunk/themes-plus.php:150
+#: tmp/svn/trunk/themes-plus.php:225
 #@ themes-plus
 msgid "Error"
 msgstr "Fehler"
 
-#: themes-plus.php:249
+#: themes-plus.php:286
+#: tmp/svn/tags/1.0/themes-plus.php:249
+#: tmp/svn/tags/1.1/themes-plus.php:259
+#: tmp/svn/tags/1.1.1/themes-plus.php:284
+#: tmp/svn/tags/1.1.2/themes-plus.php:285
+#: tmp/svn/trunk/themes-plus.php:285
 #, php-format
 #@ themes-plus
 msgid "Permalink to %s"
 msgstr "Permalink zu %s"
 
-#: themes-plus.php:240
+#: themes-plus.php:276
+#: tmp/svn/tags/1.0/themes-plus.php:240
+#: tmp/svn/tags/1.1/themes-plus.php:250
+#: tmp/svn/tags/1.1.1/themes-plus.php:275
+#: tmp/svn/tags/1.1.2/themes-plus.php:276
+#: tmp/svn/trunk/themes-plus.php:276
 #@ themes-plus
 msgid "Recent Posts"
 msgstr "Aktuelle Einträge"
 
 #: inc/gallery_mod.php:348
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:348
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:348
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:348
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:348
+#: tmp/svn/trunk/inc/gallery_mod.php:348
 #@ themes-plus
 msgid "All"
 msgstr "Alle"
 
 #: inc/gallery_mod.php:288
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:288
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:288
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:288
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:288
+#: tmp/svn/trunk/inc/gallery_mod.php:288
 #@ themes-plus
 msgid "more"
 msgstr "mehr"
 
 #: inc/gallery_mod.php:15
+#: tmp/svn/tags/1.0/inc/gallery_mod.php:15
+#: tmp/svn/tags/1.1/inc/gallery_mod.php:15
+#: tmp/svn/tags/1.1.1/inc/gallery_mod.php:15
+#: tmp/svn/tags/1.1.2/inc/gallery_mod.php:15
+#: tmp/svn/trunk/inc/gallery_mod.php:15
 #@ themes-plus
 msgid "Portfolio Filter"
 msgstr ""
 
-#: themes-plus.php:77
+#: themes-plus.php:84
+#: tmp/svn/tags/1.0/themes-plus.php:77
+#: tmp/svn/tags/1.1/themes-plus.php:83
+#: tmp/svn/tags/1.1.1/themes-plus.php:83
+#: tmp/svn/tags/1.1.2/themes-plus.php:84
+#: tmp/svn/trunk/themes-plus.php:84
 #@ themes-plus
 msgid "Weblink"
 msgstr ""
 
-#: inc/map.php:36
+#: inc/map.php:41
+#: tmp/svn/tags/1.0/inc/map.php:36
+#: tmp/svn/tags/1.1/inc/map.php:36
+#: tmp/svn/tags/1.1.1/inc/map.php:41
+#: tmp/svn/tags/1.1.2/inc/map.php:41
+#: tmp/svn/trunk/inc/map.php:41
 #@ themes-plus
 msgid "Map"
 msgstr "Karte"
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:82
 #: shortcake-plugin/inc/class-shortcode-ui.php:83
+#: shortcake-plugin/inc/class-shortcode-ui.php:84
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:82
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:83
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:80
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:81
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:80
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:81
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:83
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:84
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:83
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:84
 #@ shortcode-ui
 msgid "Insert Post Element"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:84
+#: shortcake-plugin/inc/class-shortcode-ui.php:85
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:84
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:82
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:82
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:85
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:85
 #@ shortcode-ui
 msgid "Post Element Details"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:85
+#: shortcake-plugin/inc/class-shortcode-ui.php:86
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:85
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:83
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:83
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:86
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:86
 #@ shortcode-ui
 msgid "Insert Element"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:86
+#: shortcake-plugin/inc/class-shortcode-ui.php:87
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:86
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:84
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:84
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:87
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:87
 #@ shortcode-ui
 msgid "Update"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:87
+#: shortcake-plugin/inc/class-shortcode-ui.php:88
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:87
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:85
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:85
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:88
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:88
 #@ shortcode-ui
 msgid "Edit"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:88
+#: shortcake-plugin/inc/class-shortcode-ui.php:89
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:88
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:86
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:86
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:89
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:89
 #@ shortcode-ui
 msgid "Preview"
 msgstr ""
 
-#: shortcake-plugin/inc/class-shortcode-ui.php:151
+#: shortcake-plugin/inc/class-shortcode-ui.php:163
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/class-shortcode-ui.php:151
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/class-shortcode-ui.php:149
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:150
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:163
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:163
 #@ shortcode-ui
 msgid "Something's rotten in the state of Denmark"
 msgstr ""
 
 #: shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#: tmp/svn/tags/1.0/shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#: tmp/svn/tags/1.1/shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#: tmp/svn/trunk/shortcake-plugin/inc/templates/edit-form.tpl.php:3
 #@ shortcode-ui
 msgid "Back to list"
 msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:90
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/class-shortcode-ui.php:87
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/class-shortcode-ui.php:90
+#: tmp/svn/trunk/shortcake-plugin/inc/class-shortcode-ui.php:90
+#@ shortcode-ui
+msgid "Failed to load preview"
+msgstr ""
+
+#: shortcake-plugin/inc/fields/class-field-attachment.php:47
+#: shortcake-plugin/inc/fields/class-field-attachment.php:48
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/fields/class-field-attachment.php:47
+#: tmp/svn/tags/1.1.1/shortcake-plugin/inc/fields/class-field-attachment.php:48
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/fields/class-field-attachment.php:47
+#: tmp/svn/tags/1.1.2/shortcake-plugin/inc/fields/class-field-attachment.php:48
+#: tmp/svn/trunk/shortcake-plugin/inc/fields/class-field-attachment.php:47
+#: tmp/svn/trunk/shortcake-plugin/inc/fields/class-field-attachment.php:48
+#@ shortcode-ui
+#@ shortcake
+msgid "Select Attachment"
+msgstr ""
+
+#: themes-plus.php:290
+#@ themes-plus
+msgid "No Posts found!"
+msgstr "Keine Einträge gefunden!"
 
