@@ -69,7 +69,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Where can I get help? =
 * You can ask questions in the Support forums
-  * [https://github.com/them-es](https://github.com/them-es "GitHub")
+  * [https://wordpress.org/support/plugin/themes-plus](https://wordpress.org/support/plugin/themes-plus "WordPress Support")
   * [http://them.es/support](http://them.es/support "them.es Support")
 * WordPress developers are welcome to help us improve the Plugin via [GitHub](https://github.com/them-es "GitHub")
   
