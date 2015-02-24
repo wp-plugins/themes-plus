@@ -49,18 +49,23 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 == Frequently Asked Questions ==
 
 = What modules are included? Where can I find the Developer Documentation? =
+
 * __Demos and Docs can be found here:__
   * [http://them.es/plus](http://them.es/plus "them.es+")
-* __Custom Shortcodes:__ Google Maps, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Content Carousels, Bootstrap Column Grid
-  * _Simply use the them.es+ button in the TinyMCE Editor to add a module on the page_
-* __WordPress Standard Image Gallery hooks:__ Gallery Grids, Image Carousels, Panzoom (Ken Burns) Slider, Portfolio Filter
-  * _Gallery hooks can be activated by creating a new Gallery, adding images and selecting the "Type" in the Gallery settings_
-* __Portfolio Filter:__
-  * _Upload all images which should appear in the Portfolio and name/tag them accordingly. Create a new WordPress Gallery and select Type "Portfolio Filter"_
+* __Modules__ can be added and setup using the them.es+ button in the TinyMCE Editor
+* __Image Galleries__, __Slideshows__ and the __Portfolio__ are built upon WordPress galleries
+
+= How can I add Image Galleries and slideshows? =
+* Gallery hooks can be activated by __Creating a new WordPress Gallery__, adding images and selecting the __Type__ in the Gallery settings
+
+= How can I setup a Portfolio Filter? =
+* Upload all images which should appear in the Portfolio
+* __Name__ and __Tag__ them accordingly. Images are grouped in the filter by using the same tag
+* Create a new WordPress Gallery and select Type __Portfolio Filter__
 
 = Does this Plugin work with my Theme? =
 * The Plugin has been primarily developed to bring additional features into [them.es](http://them.es/ "them.es") Themes
-* It should work out-of-the-box if your WordPress Theme has been built with Bootstrap and if all Bootstrap components are included in your Theme
+* But it should work out-of-the-box if your WordPress Theme has been built with Bootstrap and if all Bootstrap components are included in your Theme
 
 = Where can I get help? =
 * You can ask questions in the Support forums
