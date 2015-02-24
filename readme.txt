@@ -18,12 +18,11 @@ Useful WordPress Add-ons for Themes built with Bootstrap
     
 = What you get? =
 
-* All Add-ons are documented under [http://them.es/plus](http://them.es/plus/ "them.es+") 
 * `[Shortcodes]`
+* Demos and Docs can be found under [http://them.es/plus](http://them.es/plus/ "them.es+")
 * Google Maps, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Carousel, Grid, etc.
 * WordPress Standard Image Gallery hooks, Slider, Portfolio Filter
 * TinyMCE Button
-* Page Builder
 * Theme Customization API (on them.es Themes!)
 
 = Compatibility? =
@@ -50,7 +49,8 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 == Frequently Asked Questions ==
 
 = What modules are included? Where can I find the Developer Documentation? =
-* Have a look at the demos/docs here [http://them.es/plus](http://them.es/plus "them.es+")
+* __Demos and Docs can be found here:__
+  * [http://them.es/plus](http://them.es/plus "them.es+")
 * __Custom Shortcodes:__ Google Maps, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Content Carousels, Bootstrap Column Grid
   * _Simply use the them.es+ button in the TinyMCE Editor to add a module on the page_
 * __WordPress Standard Image Gallery hooks:__ Gallery Grids, Image Carousels, Panzoom (Ken Burns) Slider, Portfolio Filter
@@ -60,7 +60,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Does this Plugin work with my Theme? =
 * The Plugin has been primarily developed to bring additional features into [them.es](http://them.es/ "them.es") Themes
-* If your WordPress Theme has been built with Bootstrap and if all Bootstrap components are included in your Theme the Plugin should work out-of-the-box
+* It should work out-of-the-box if your WordPress Theme has been built with Bootstrap and if all Bootstrap components are included in your Theme
 
 = Where can I get help? =
 * You can ask questions in the Support forums
