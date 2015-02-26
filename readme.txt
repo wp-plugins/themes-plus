@@ -1,9 +1,9 @@
 === them.es Plus ===
 Contributors: them.es
-Tags: bootstrap, slideshow, slider, gallery, portfolio filter, google maps, count down, count up, progressbar, contact form, grid
+Tags: bootstrap, slideshow, slider, gallery, portfolio filter, google maps, google analytics, count down, count up, progressbar, contact form, grid
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,12 +18,11 @@ Useful WordPress Add-ons for Themes built with Bootstrap
     
 = What you get? =
 
-* `[Shortcodes]`
+* `[Shortcodes]` and Customization
 * Demos and Docs can be found under [http://them.es/plus](http://them.es/plus/ "them.es+")
-* Google Maps, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Carousel, Grid, etc.
+* Google Maps, Google Analytics, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Carousel, Grid, etc.
 * WordPress Standard Image Gallery hooks, Slider, Portfolio Filter
 * TinyMCE Button
-* Theme Customization API (on them.es Themes!)
 
 = Compatibility? =
 
@@ -32,7 +31,8 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Feedback/Help/Contribution? =
 
-* The Development of this Plugin can be followed via GitHub <3 and are happy to receive feedback, questions, feature suggestions and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
+* The Development of this Plugin can be followed via GitHub <3
+* We are happy to receive feedback, questions, feature suggestions and pull requests: [https://github.com/them-es](https://github.com/them-es "GitHub")
 
 == Screenshots ==
 
@@ -86,6 +86,9 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 * Updated documentation
 
 == Changelog ==
+
+= 1.1.4 =
+* WordPress Customizer API: Google Analytics, Google Maps (Add a Marker image, Default latlng/zoom, Map styles)
 
 = 1.1.3 =
 * New feature: Animated Bootstrap Progress bar `[progressbar]40[/progressbar]`
