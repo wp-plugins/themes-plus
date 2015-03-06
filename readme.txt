@@ -18,7 +18,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Looking for a compatible Theme? =
 
-* Generate your customized Bootstrap Starter Theme under [them.es](http://them.es/starter "them.es")
+* Generate your customized __Bootstrap Starter Theme__ under [http://them.es/starter](http://them.es/starter "them.es"). It's free!
     
 = What you get? =
 
