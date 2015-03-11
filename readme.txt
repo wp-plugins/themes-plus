@@ -3,7 +3,7 @@ Contributors: them.es
 Tags: bootstrap, slideshow, slider, gallery, portfolio filter, google maps, google analytics, count down, count up, progressbar, contact form, grid
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,11 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 == Changelog ==
 
+= 1.1.6 =
+* Changes: New type "Chart" in Progress bar. Added a title attribute.
+* Shortcake: Added latest release
+* Added license.txt
+
 = 1.1.5 =
 * Contactform: Optional custom email as recipient `[contactform email="email@domain.tld"]`
 * Shortcake: Added latest release. Moved files to /inc/shortcake. Only load if class doesn't exist already!
@@ -99,7 +104,7 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 * WordPress Customizer API: Google Analytics, Google Maps (Add a Marker image, Default latlng/zoom, Map styles)
 
 = 1.1.3 =
-* New feature: Animated Bootstrap Progress bar `[progressbar]40[/progressbar]`
+* New feature: Animated Progress bar `[progressbar]40[/progressbar]`
 
 = 1.1.2 =
 * New features: Countdown Timer shortcode `[timer]January 01, 2020 12:00:00[/timer]`, Count up Stats shortcode `[countup]123456[/countup]`
