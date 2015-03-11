@@ -18,13 +18,14 @@ Useful WordPress Add-ons for Themes built with Bootstrap
 
 = Looking for a compatible Theme? =
 
-* Generate your customized __Bootstrap Starter Theme__ under [http://them.es/starter](http://them.es/starter "them.es"). It's free!
+* Generate your customized __Bootstrap Starter Theme__ under [http://them.es/starter](http://them.es/starter "them.es") - It's free!
     
 = What you get? =
 
 * `[Shortcodes]` and Customization
 * Demos and Docs can be found under [http://them.es/plus](http://them.es/plus/ "them.es+")
-* Google Maps, Google Analytics, Contact form, Recent Posts, Count down to date, Funny Count up Stats, Carousel, Grid, etc.
+* Contact form, Recent Posts, Progress bars/charts, Count down to date, Funny Count up Stats, Carousel, Grid, etc.
+* Google Maps, Google Analytics
 * WordPress Standard Image Gallery hooks, Slider, Portfolio Filter
 * TinyMCE Button
 
