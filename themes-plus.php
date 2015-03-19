@@ -3,7 +3,7 @@
  * Plugin Name: them.es Plus
  * Plugin URI: https://wordpress.org/plugins/themes-plus
  * Description: "Short-code" your Bootstrap powered Theme and activate useful modules and features.
- * Version: 1.1.6
+ * Version: 1.1.7
  * Author: them.es
  * Author URI: http://them.es
  * Text Domain: themes-plus
@@ -530,7 +530,7 @@ if ( !class_exists("themesPlus") ) {
 					}
 					
 					$progressbar = '<div class="chart">';
-					$progressbar .= '<div class="easyPieChart" data-percent="0" data-value="' . $value . '" data-duration="' . ( isset($duration) && $duration != "" ? $duration*1000 : '2000' ) . '"' . ( isset($colorcode) && $colorcode != "" ? ' data-bar-color="#' . $colorcode . '"' : '' ) . '>' . ( isset($label) && $label != "" || isset($label) && $label == "1" ? '<span class="percent">' . $value . '</span>' : '' ) . '</div>';
+					$progressbar .= '<div class="easyPieChart" data-animate="on" data-percent="0" data-value="' . $value . '" data-duration="' . ( isset($duration) && $duration != "" ? $duration*1000 : '2000' ) . '"' . ( isset($colorcode) && $colorcode != "" ? ' data-bar-color="#' . $colorcode . '"' : '' ) . '>' . ( isset($label) && $label != "" || isset($label) && $label == "1" ? '<span class="percent">' . $value . '</span>' : '' ) . '</div>';
 					if ( isset($title) && $title != "" ) { $progressbar .= '<h3>' . $title . '</h3>'; }
 					$progressbar .= '</div>';
 					
@@ -660,6 +660,9 @@ if ( !class_exists("themesPlus") ) {
          * [/carousel]
          */
             function themes_carousel_shortcode( $atts = array(), $content = null ) {
+				
+				wp_register_script( 'carouselinit', plugins_url( '/js/carouselinit.min.js', __FILE__ ), array('jquery'), '1.0', false );
+                wp_enqueue_script( 'carouselinit' );
                 
                 // Get Attributes
                 extract(shortcode_atts(array(
@@ -731,10 +734,8 @@ if ( !class_exists("themesPlus") ) {
                     )
                 );
             }
-            
 			
-
-
+			
         /**
          * Grid
          * 
