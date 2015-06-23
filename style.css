@@ -97,11 +97,6 @@
   width: auto;
   display: inline;
 }
-/* WordPress Embeds */
-.wp-video,
-.embed-responsive {
-  margin: 10px 0;
-}
 /* WordPress Standard Gallery */
 .gallery {
   margin-bottom: 10px;
@@ -321,20 +316,20 @@
   border-right: 5px solid #ffffff;
 }
 /* Progressbar: EasyPieChart */
-.chart {
+.pie {
   margin: 10px;
   float: left;
 }
-.chart h3 {
+.pie h3 {
   text-align: center;
 }
-.easyPieChart {
+.chart {
   position: relative;
   text-align: center;
   width: 220px;
   height: 220px;
 }
-.easyPieChart canvas {
+.chart canvas {
   position: absolute;
   top: 0;
   left: 0;
